@@ -49,13 +49,50 @@ class Choices {
   }
 }
 
-var rule1 = new Choices ("First Dance Songs");
-var rule2 = new Choices ("Stripper Costumes");
-var rule3 = new Choices ("TV Couples");
+var rule1 = new Choices ("Name 3 First Dance Songs");
+var rule2 = new Choices ("Name 3 Stripper Costumes");
+var rule3 = new Choices ("Name 3 TV Couples");
+var rule4 = new Choices ("Name 3 Places to propose");
+var rule5 = new Choices ("Name 3 Celebrity Couples");
+var rule6 = new Choices ("Name 3 Date Night Activities");
+var rule7 = new Choices ("Name 3 People who need to gain weight");
+var rule8 = new Choices ("Name 3 Cocktails");
+var rule9 = new Choices ("Name 3 Things you can do with a condom");
+var rule10 = new Choices ("Name 3 Wet Things");
+var rule11 = new Choices ("Name 3 Times Bigger is Better");
+var rule12 = new Choices ("Name 3 Things You Don't Want Your Boss to Tell You");
 
-var full_stack = [ rule1, rule2, rule3 ];
+var full_stack = [ rule1, rule2, rule3, rule4, rule5, rule6, rule7, rule8, rule9, rule10, rule11, rule12, rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21, rule22, rule23, rule24 ];
 
+var rule13 = new Choices ("Name 3 Stains");
+var rule14 = new Choices ("Name 3 Things that are forged");
+var rule15 = new Choices ("Name 3 Things you don't want your doctor to say");
+var rule16 = new Choices ("Name 3 Potential Safe Words");
+var rule17 = new Choices ("Name 3 Reasons you go to Court");
+var rule18 = new Choices ("Name 3 Things You Shouldn't Buy from a Street Vendor");
+var rule19 = new Choices ("Name 3 Reasons to Take Your Shirt Off");
+var rule20 = new Choices ("Name 3 Peole Who Always Take the Blame");
+var rule21 = new Choices ("Name 3 Uses for Your Nose");
+var rule22 = new Choices ("Name 3 Things You Wear Under Clothing");
+var rule23 = new Choices ("Name 3 Jerks");
+var rule24 = new Choices ("Name 3 Things You Lock Up");
 
+var full_stack2 = [rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21, rule22, rule23, rule24];
+
+// var rule25 = new Choices ("Name 3 Stains");
+// var rule26 = new Choices ("Name 3 Things that are forged");
+// var rule27 = new Choices ("Name 3 Things you don't want your doctor to say");
+// var rule28 = new Choices ("Name 3 Potential Safe Words");
+// var rule29 = new Choices ("Name 3 Reasons you go to Court");
+// var rule30 = new Choices ("Name 3 Things You Shouldn't Buy from a Street Vendor");
+// var rule31 = new Choices ("Name 3 Reasons to Take Your Shirt Off");
+// var rule32 = new Choices ("Name 3 Peole Who Always Take the Blame");
+// var rule33 = new Choices ("Name 3 Uses for Your Nose");
+// var rule34 = new Choices ("Name 3 Things You Wear Under Clothing");
+// var rule35 = new Choices ("Name 3 Jerks");
+// var rule36 = new Choices ("Name 3 Things You Lock Up");
+
+// var full_stack2 = [rule13, rule14, rule15, rule16, rule17, rule18, rule19, rule20, rule21, rule22, rule23, rule24];
 
 function next_card() {
 
