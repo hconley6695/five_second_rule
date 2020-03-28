@@ -17,22 +17,6 @@ require('foundation-sites');
 $(document).foundation();
 
 
-// function downloadTimer() {
-// 	var timeleft = 6;
-// 	setInterval(function(){
-//   		if(timeleft <= 0){
-//     		document.getElementById("countdown").innerHTML = "Finished";
-//  //    		beep();
-//   		} else {
-//     		document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-//   		}
-//   		timeleft--;
-
-// 	}, 1000);
-
-// }
-
-
 function downloadTimer() {
 	var seconds = document.getElementById("countdown").textContent;
 
@@ -43,7 +27,10 @@ function downloadTimer() {
 	var countdown = setInterval(function() {
 	    seconds--;
 	    document.getElementById("countdown").textContent = seconds;
-	    if (seconds <= 0) clearInterval(countdown);
+	    if (seconds <= 0) {
+	    	clearInterval(countdown);
+	    	beep();
+	    }
 	}, 1000);
 
 }
@@ -74,10 +61,8 @@ function next_card() {
 
     if (full_stack.length){
       	var single = full_stack.shift();
-    	// $('.callout').html(screen(single));
     	$('.callout').append(screen(single));    	
     	downloadTimer();
-    	// countdown();
 
   	} else {
 
@@ -97,8 +82,7 @@ function screen(words){
 
 }
 
-$('.grid-container .cell p a.button').on('click', function(event) {
-	// console.log("click");
+$('.grid-container .cell p a.stackone').on('click', function(event) {
 	$('.callout').empty();
   	next_card();
 });
@@ -107,7 +91,5 @@ $('.grid-container p a.timer').on('click', function(event) {
 	$('.countdown').empty();
 	console.log("click");
 	downloadTimer();
-	// countdown();
-	// beep();
 });
 
