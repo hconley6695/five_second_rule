@@ -22446,18 +22446,30 @@ __webpack_require__(/*! foundation-sites */ "./node_modules/foundation-sites/dis
 //import './lib/foundation-explicit-pieces';
 
 
-jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation();
+jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).foundation(); // function downloadTimer() {
+// 	var timeleft = 6;
+// 	setInterval(function(){
+//   		if(timeleft <= 0){
+//     		document.getElementById("countdown").innerHTML = "Finished";
+//  //    		beep();
+//   		} else {
+//     		document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
+//   		}
+//   		timeleft--;
+// 	}, 1000);
+// }
 
 function downloadTimer() {
-  var timeleft = 6;
-  setInterval(function () {
-    if (timeleft <= 0) {
-      document.getElementById("countdown").innerHTML = "Finished"; //    		beep();
-    } else {
-      document.getElementById("countdown").innerHTML = timeleft + " seconds remaining";
-    }
+  var seconds = document.getElementById("countdown").textContent;
 
-    timeleft--;
+  if (seconds == 0) {
+    seconds = 6;
+  }
+
+  var countdown = setInterval(function () {
+    seconds--;
+    document.getElementById("countdown").textContent = seconds;
+    if (seconds <= 0) clearInterval(countdown);
   }, 1000);
 }
 
@@ -22479,10 +22491,10 @@ var full_stack = [rule1, rule2, rule3];
 
 function next_card() {
   if (full_stack.length) {
-    var single = full_stack.shift();
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.callout').append(screen(single)); // $('.callout').append(screen(single));    	
+    var single = full_stack.shift(); // $('.callout').html(screen(single));
 
-    downloadTimer();
+    jquery__WEBPACK_IMPORTED_MODULE_0___default()('.callout').append(screen(single));
+    downloadTimer(); // countdown();
   } else {
     alert("There are no more choices.");
   }
@@ -22501,7 +22513,8 @@ jquery__WEBPACK_IMPORTED_MODULE_0___default()('.grid-container .cell p a.button'
 jquery__WEBPACK_IMPORTED_MODULE_0___default()('.grid-container p a.timer').on('click', function (event) {
   jquery__WEBPACK_IMPORTED_MODULE_0___default()('.countdown').empty();
   console.log("click");
-  downloadTimer(); // beep();
+  downloadTimer(); // countdown();
+  // beep();
 });
 
 /***/ }),
